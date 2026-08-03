@@ -1,0 +1,7 @@
+first_top_processor_size: 3
+bottom_processor_size: 6
+last_top_processor_size: 3
+hidden_dim: 64
+hidden_dim_scaling: 2
+num_levels: 3
+mp_per_distant_interaction_block: 2

@@ -1,0 +1,61 @@
+defaults:
+  # - data: helmholtz_monopole
+  - data: helmholtz_plane
+  # - data: laplace
+  - model/scagnn
+  - loss: huber
+  
+project: scagnn
+
+seed: 42
+
+dataset_root: datasets
+dataset_train: 
+dataset_val: 
+dataset_test:
+
+data:
+  etypes: 
+    - neighbors
+    - distant
+
+  # Ratio of connection to create with the available nodes for each node at the highest scale level
+  num_new_edges_per_nodes:
+    neighbors: 0
+    distant: 20
+
+edge_sampling:
+  error_weight: 1
+  candidate_edge_ratio: 2
+
+training_batch_size: 16
+val_batch_size: 10
+accumulate_grad_batches: 1
+
+lr_max: 1e-4
+lr_min: 1e-7
+lr_scheduler: True
+max_grad_norm: 1.
+
+max_epochs: 100
+
+apply_data_augmentation: True
+
+# Whether the network should output normalized values with the distance to a source point
+predict_normalized: True
+
+# Whether the loss should compare normalized values with the distance to a source point
+compare_normalized: True
+
+# Position encoding
+pe:
+  dist:
+    dim: 128
+  wavelength:
+    type: invrescaling
+
+loss_factor: 0.4
+
+intermediate_preds: True
+
+edge_uncertainty: True
