@@ -2,7 +2,7 @@
 </h2>
 
 
-This repository contains the official implementation of the paper [**ScaGNN**]().
+This repository contains the official implementation of the paper [**ScaGNN**](https://arxiv.org/abs/2609.37509).
 
 
 ![ScaGNN Architecture](media/archi.png)
