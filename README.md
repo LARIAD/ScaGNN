@@ -20,7 +20,7 @@ sh scripts/gen_helmholtz_dirichlet.sh
 sh scripts/gen_helmholtz_neumann.sh
 ```
 
-### Download [ScaGNN datasets](https://huggingface.co/datasets/RemiMarsal/pibnet) with [Hugging Face CLI](https://huggingface.co/docs/huggingface_hub/en/guides/cli)
+### Download [ScaGNN datasets](https://huggingface.co/datasets/RemiMarsal/scagnn) with [Hugging Face CLI](https://huggingface.co/docs/huggingface_hub/en/guides/cli)
 ```
 hf download RemiMarsal/pibnet --repo-type dataset --local-dir datasets
 ```
