@@ -30,7 +30,7 @@ def main(cfg: DictConfig):
 
     checkpoint_reference = cfg.checkpoint_reference
 
-    run = wandb.init(project="scagnn")
+    run = wandb.init(project=cfg.project)
     artifact = run.use_artifact(checkpoint_reference, type="model")
     artifact_dir = artifact.download()
 
